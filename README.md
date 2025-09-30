@@ -37,6 +37,14 @@ We're working hard to achieve more features, welcome to PRs!
 ### Command line
 ```shell
 git clone https://github.com/florensiawidjaja/BioinfoMCP.git
+
+# Create Conda environment for an isolated production environment
+conda create -n bioinfomcp-env
+conda activate bioinfomcp-env
+
+uv pip install fastmcp
+
+
 ```
 
 ### Docker
