@@ -7,7 +7,7 @@ The Chinese University of Hong Kong, Shenzhen (CUHK Shenzhen)
 
 <!-- <a href='media/advs.202407094.pdf'><img src='https://img.shields.io/badge/Paper-PDF-red'></a> -->
 
-![Main Figure of the BioinfoMCP Platform](/Users/florensiawidjaja/Documents/BioInfoMCP/github-code/media/main-fig.pdf)
+![Main Figure of the BioinfoMCP Platform](/Users/florensiawidjaja/Documents/BioInfoMCP/media/main-fig.pdf)
 
 
 ## 🚀 About
