@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mcp-cutadapt:
+    build: .
+    image: mcp-cutadapt:latest
+    container_name: mcp-cutadapt
+    ports:
+      - "8000:8000"
+    environment:
+      - MCP_SERVER_NAME=cutadapt
+    volumes:
+      - ./workspace:/app/workspace
+      - ./output:/app/output
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    

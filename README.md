@@ -27,7 +27,9 @@ We're working hard to achieve more features, welcome to PRs!
 - [x] Provide a docker version, simplify the installation process
 - [ ] Pack into a conda package, simplify the installation process
 - [ ] Automatic tool discovery and conversion
+- [ ] BioinfoMCP Benchmark Addition: Ollama
 - [ ] Online Platform to share MCP servers
+- [ ] Adaptive and More reliable Installation 
 
 **We warmly welcome any inputs or contributions to collaboratively improve BioinfoMCP**
 
@@ -78,9 +80,9 @@ Run this script if you have checked the internal manual and it contains comprehe
 Run this script if you want BioinfoMCP Converter to extract from a PDF manual.
 `python -m main --name trimmomatic --manual "</path/to/tool/manual.pdf>" --output_location <output-folder-location>`
 
-**Please note that this work uses the GPT-4 API and does not guarantee that GPT-3.5 will work properly in all cases.**
+**Please ensure that the LLM backbone supports function calling**
 
-## Use Cases
+### BioinfoMCP Benchmark
 
 ### Example 1: Bulk RNA-Seq
 

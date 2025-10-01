@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mcp-bedtools-intersect:
+    build: .
+    image: mcp-bedtools-intersect:latest
+    container_name: mcp-bedtools-intersect
+    ports:
+      - "8000:8000"
+    environment:
+      - MCP_SERVER_NAME=bedtools-intersect
+    volumes:
+      - ./workspace:/app/workspace
+      - ./output:/app/output
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    

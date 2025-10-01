@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mcp-macs3-hmmratac:
+    build: .
+    image: mcp-macs3-hmmratac:latest
+    container_name: mcp-macs3-hmmratac
+    ports:
+      - "8000:8000"
+    environment:
+      - MCP_SERVER_NAME=macs3-hmmratac
+    volumes:
+      - ./workspace:/app/workspace
+      - ./output:/app/output
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    

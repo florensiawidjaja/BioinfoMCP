@@ -1,0 +1,9 @@
+
+name: mcp-tool
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - cutadapt
+  - pip
+    
