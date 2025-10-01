@@ -7,7 +7,7 @@ The Chinese University of Hong Kong, Shenzhen (CUHK Shenzhen)
 
 <!-- <a href='media/advs.202407094.pdf'><img src='https://img.shields.io/badge/Paper-PDF-red'></a> -->
 
-![Main Figure of the BioinfoMCP Platform](/Users/florensiawidjaja/Documents/BioInfoMCP/media/main-fig.pdf)
+![Main Figure of the BioinfoMCP Platform](/Users/florensiawidjaja/Documents/BioInfoMCP/media/main-fig.pdf?raw=true)
 
 
 ## 🚀 About
@@ -18,7 +18,7 @@ BioinfoMCP bridges the gap between specialized bioinformatics command-line tools
 **BioinfoMCP Benchmark** - A curated validation suite that systematically tests converted MCP servers across diverse computational biology tasks, ensuring reliability and versatility across different AI agent platforms.
 
 ## 🧐 What's New
-- **[2023/09]** We finally can officially release our BioinfoMCP Platform (version `v0.0.1`)! 🥳👏
+- **[2025/09]** We finally share our ground-breaking BioinfoMCP Platform to the scientific community (version `v0.0.1`)! 🥳👏
 
 ## TODO list
 
