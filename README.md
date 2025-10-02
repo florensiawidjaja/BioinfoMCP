@@ -168,8 +168,7 @@ reference: https://github.com/IMNMV/ClaudeR
 * Connect CluadeR to your AI Agent using the instruction shown in the reference above.
 * Restart your AI Agent and then run the following:
 ```
-I want to run pipeline ChIP-seq on /path/to/genomic/files/ to do motif discovery for binding
-sites. Use the existing MCP tools as much as possible, and only execute R if none of them are available for the task given. Make an Executive Summary report at the end.
+I want to run pipeline ChIP-seq on /path/to/genomic/files/ to do motif discovery for binding sites. Use the existing MCP tools as much as possible, and only execute R if none of them are available for the task given. Make an Executive Summary report at the end.
 ```
 
 
