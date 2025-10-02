@@ -20,7 +20,7 @@ BioinfoMCP bridges the gap between specialized bioinformatics command-line tools
 ## 🧐 What's New
 - **[2025/10]** We finally share our ground-breaking BioinfoMCP Platform to the scientific community (version `v0.0.1`)! 🥳👏
 
-## TODO list
+## 🏁 TODO list
 
 We're working hard to achieve more features, welcome to PRs!
 
@@ -34,7 +34,7 @@ We're working hard to achieve more features, welcome to PRs!
 **We warmly welcome any inputs or contributions to collaboratively improve BioinfoMCP**
 
 
-## Installation
+## ⚙️ Installation
 
 ### Command line
 ```shell
@@ -45,12 +45,19 @@ git clone https://github.com/florensiawidjaja/BioinfoMCP.git
 conda create -n bioinfomcp-env
 conda activate bioinfomcp-env
 
-# 3. Install the fastmcp package
+# 3. Install the fastmcp and openai package
 uv pip install fastmcp
+pip install openai
 
 ```
 
 ## 🗃️ Repository Structure
+./mcp-servers contains the MCP servers converted from BioinfoMCP Converter and tested in our Benchmark
+
+Inside ./src, there are three files:
+* **system_prompt.txt**: The system prompt for the LLM Backbone
+* **bioinfomcp_converter.py**: Script to execute the conversion workflow
+* **main.py**: Manage the overall workflow, from documentation preparation, conversion execution, and a packaged delivery.
 
 
 ## 🧰🔬 BioinfoMCP Converter - Convert your own Bioinformatics Tool

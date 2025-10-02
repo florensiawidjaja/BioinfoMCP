@@ -1,9 +1,0 @@
-
-name: mcp-tool
-channels:
-  - bioconda
-  - conda-forge
-dependencies:
-  - trimmomatic
-  - pip
-    
