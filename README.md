@@ -73,10 +73,14 @@ Run this command to start a simple example with GPT-4.1-mini as backend (**recom
 **Please ensure that the LLM backbone supports function calling**
 
 Run this script if you have checked the internal manual and it contains comprehensive documentation.
-`python -m main --name <tool-name> --manual "\-\-help" --run_help_command True --output_location </path/to/output/folder/>`
+```shell
+python -m main --name <tool-name> --manual "\-\-help" --run_help_command True --output_location </path/to/output/folder/>
+```
 
 Run this script if you want BioinfoMCP Converter to extract from a PDF manual.
-`python -m main --name trimmomatic --manual "</path/to/tool/manual.pdf>" --output_location </path/to/output/folder/>`
+```shell
+python -m main --name <tool-name> --manual "</path/to/tool/manual.pdf>" --output_location </path/to/output/folder/>
+```
 
 After having the converted MCP server ready, you can now use your MCP server as follows:
 
@@ -148,7 +152,7 @@ docker compose up --build
 
 #### 1.1 FastQC
 ```
-I want to run FastQC on /path/to/SRR8405197.fastq. Please state what commands you run and what are the outputs or results from that command.
+Can you run FastQC on /path/to/SRR8405197.fastq. Please state what commands you run and what are the outputs or results from that command.
 ```
 
 ### 2. Pipeline/Complex Task Testing
@@ -157,7 +161,7 @@ I want to run FastQC on /path/to/SRR8405197.fastq. Please state what commands yo
 #### 2.1 Pure CLI tools: ATAC-seq
 > Tools needed: FastQC, Trim-galore, Bowtie2, samtools, MACS3, MultiQC 
 ```
-I want to run pipeline ATAC-seq on /path/to/genomic/files/ to do identification of open chromatin region. Please run the command appropriately and please explain and give appropriate next steps.
+Can you run the ATAC-seq analysis for identifying open chromatin region task to the /path/to/SRR8405197_1.fastq and /path/to/SRR8405197_2.fastq. Give appropriate explanations and summarize results at the end with a simple report.
 ```
 
 ### 2.2 Combination with R Package tools: ChIP-seq
@@ -166,9 +170,13 @@ For certain pipelines like ChIP-seq, we would require tools that are already com
 reference: https://github.com/IMNMV/ClaudeR
 
 * Connect CluadeR to your AI Agent using the instruction shown in the reference above.
-* Restart your AI Agent and then run the following:
+* Restart your AI Agent
+> Tools needed: FastQC, Bowtie2, samtools, MACS3, Deeptools, MultiQC, R (GenomicRanges, GenomicAlignment, Rsamtools)
+
 ```
-I want to run pipeline ChIP-seq on /path/to/genomic/files/ to do motif discovery for binding sites. Use the existing MCP tools as much as possible, and only execute R if none of them are available for the task given. Make an Executive Summary report at the end.
+
+Can you run the ChIP-seq analysis for Motif discovery for binding sites task to the /path/to/SRR8405197_1.fastq and /path/to/SRR8405197_2.fastq. I already have the Reference index at /path/to/ref-index/. Use the existing MCP tools as much as possible, and only execute R if none of them are available for the task given. Make an Executive Summary report at the end.
+
 ```
 
 
