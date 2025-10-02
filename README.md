@@ -18,7 +18,7 @@ BioinfoMCP bridges the gap between specialized bioinformatics command-line tools
 **BioinfoMCP Benchmark** - A curated validation suite that systematically tests converted MCP servers across diverse computational biology tasks, ensuring reliability and versatility across different AI agent platforms.
 
 ## 🧐 What's New
-- **[2025/09]** We finally share our ground-breaking BioinfoMCP Platform to the scientific community (version `v0.0.1`)! 🥳👏
+- **[2025/10]** We finally share our ground-breaking BioinfoMCP Platform to the scientific community (version `v0.0.1`)! 🥳👏
 
 ## TODO list
 
@@ -38,91 +38,151 @@ We're working hard to achieve more features, welcome to PRs!
 
 ### Command line
 ```shell
+# 1. Clone this project
 git clone https://github.com/florensiawidjaja/BioinfoMCP.git
 
-# Create Conda environment for an isolated production environment
+# 2. Create Conda environment for an isolated production environment
 conda create -n bioinfomcp-env
 conda activate bioinfomcp-env
 
+# 3. Install the fastmcp package
 uv pip install fastmcp
 
-
 ```
 
-### Docker
-
-Please refer to https://docs.docker.com/engine/install to install Docker first.
-
-```shell
-
-```
+## 🗃️ Repository Structure
 
 
-Try the previous codes again.
+## 🧰🔬 BioinfoMCP Converter - Convert your own Bioinformatics Tool
+#### Prerequisite
+1. An OpenAI API Key from an account that has a sufficient credit available.
+*Note: You should also be able to use Anthropic Models. However, we have not done extensive experiments on it so we still suggest you to use an OpenAI model.*
 
-### Conda
-```shell
-Coming soon...
-```
+### Usage Manual
+1. Modify the `.env` file with your API Key and Model name (We recommend model with a capability of at least GPT-4.1-mini be used)
 
-## Get Started
-
-### Understand files
-
-
-### BioinfoMCP Converter
-
-Run this command to start a simple example with GPT-4.1-mini as backend (**recommended**).
-
-Run this script if you have checked the internal manual and it contains comprehensive documentation.
-`python -m main --name <tool-name> --manual "\-\-help" --run_help_command True --output_location <output-folder-location>`
-
-Run this script if you want BioinfoMCP Converter to extract from a PDF manual.
-`python -m main --name trimmomatic --manual "</path/to/tool/manual.pdf>" --output_location <output-folder-location>`
+Run this command to start a simple example with GPT-4.1-mini as backend (**recommended**). 
 
 **Please ensure that the LLM backbone supports function calling**
 
-### BioinfoMCP Benchmark
+Run this script if you have checked the internal manual and it contains comprehensive documentation.
+`python -m main --name <tool-name> --manual "\-\-help" --run_help_command True --output_location </path/to/output/folder/>`
 
-### Example 1: Bulk RNA-Seq
+Run this script if you want BioinfoMCP Converter to extract from a PDF manual.
+`python -m main --name trimmomatic --manual "</path/to/tool/manual.pdf>" --output_location </path/to/output/folder/>`
 
-#### Case 1.1: Find differentially expressed genes
+After having the converted MCP server ready, you can now use your MCP server as follows:
 
-**Reference**: https://pzweuj.github.io/worstpractice/site/C02_RNA-seq/01.prepare_data/
+1. **If connecting directly to your Python Environment**
+* Activate your Conda Environment and install the tool that you want to use
 
-Design of `config.yaml`
-```yaml
-data_list: [ './examples/case1.1/data/SRR1374921.fastq.gz: single-end mouse rna-seq reads, replicate 1 in LoGlu group',
-            './examples/case1.1/data/SRR1374922.fastq.gz: single-end mouse rna-seq reads, replicate 2 in LoGlu group',
-            './examples/case1.1/data/SRR1374923.fastq.gz: single-end mouse rna-seq reads, replicate 1 in HiGlu group',
-            './examples/case1.1/data/SRR1374924.fastq.gz: single-end mouse rna-seq reads, replicate 2 in HiGlu group',
-            './examples/case1.1/data/TruSeq3-SE.fa: trimming adapter',
-            './examples/case1.1/data/mm39.fa: mouse mm39 genome fasta',
-            './examples/case1.1/data/mm39.ncbiRefSeq.gtf: mouse mm39 genome annotation' ]
-output_dir: './examples/case1.1/output'
-goal_description: 'find the differentially expressed genes'
+```shell
+conda activate bioinfomcp-env
+
+# Bioinformatics tools are usually integrated inside the bioconda channel, but search for conda install <tool-name> to ensure that it is correct
+conda install bioconda::tool-name
+
+# Check whether it is appropriately installed already
+conda list tool-name
 ```
+
+* Connect to your AI Agent with the following JSON Configuration
+```json
+"tool-name": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "source /Users/<username>/miniforge3/etc/profile.d/conda.sh && conda activate bioinfomcp-env && python /path/to/mcp_<tool-name>/app/<tool-name>_server.py"
+      ]
+    }
+```
+2. If connecting through a Docker Container (*Make sure that you have Docker CLI and Engine installed and ready to use*)
+
+* Turn on your Docker Engine
+* Build your Docker Container
+```shell
+cd /path/to/mcp-tool-name/folder/
+docker compose up --build
+```
+* Check that the `mcp-tool-name` container is up and running
+
+* Connect to your AI Agent with the following JSON Configuration
+```json
+"tool-name": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "-v",
+        "/path/to/mcp_<tool-name>/data:/app/workspace",
+        "mcp-<tool-name>:latest"
+      ]
+    }
+```
+
+
+## 📝💊 BioinfoMCP Benchmark - Test Your MCP Server Reliability
+**Note: **
+
+```json
+"filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/path/to/folder1/",
+        "/path/to/folder2/"
+      ]
+    }
+```
+
+### 1. Individual Tool Testing
+
+#### 1.1 FastQC
+```
+I want to run FastQC on /path/to/SRR8405197.fastq. Please state what commands you run and what are the outputs or results from that command.
+```
+
+### 2. Pipeline/Complex Task Testing
+> **Note**: Make sure that you have all sufficient tools connected to your AI agent to run this pipeline. We give you reference of what tools will be needed, but feel free to replace or add more tools on your own flexibly.
+
+#### 2.1 Pure CLI tools: ATAC-seq
+> Tools needed: FastQC, Trim-galore, Bowtie2, samtools, MACS3, MultiQC 
+```
+I want to run pipeline ATAC-seq on /path/to/genomic/files/ to do identification of open chromatin region. Please run the command appropriately and please explain and give appropriate next steps.
+```
+
+### 2.2 Combination with R Package tools: ChIP-seq
+For certain pipelines like ChIP-seq, we would require tools that are already commonly used in R language.
+**We used IMNMV/ClaudeR to extend a direct link between RStudio and AI Agents**
+reference: https://github.com/IMNMV/ClaudeR
+
+* Connect CluadeR to your AI Agent using the instruction shown in the reference above.
+* Restart your AI Agent and then run the following:
+```
+I want to run pipeline ChIP-seq on /path/to/genomic/files/ to do motif discovery for binding
+sites. Use the existing MCP tools as much as possible, and only execute R if none of them are available for the task given. Make an Executive Summary report at the end.
+```
+
 
 ##### Download Data
+In our paper, we mainly use SRR8405197.fastq, which can be obtained as follows:
 ```shell
-wget -P data/ http://hgdownload.soe.ucsc.edu/goldenPath/mm39/bigZips/genes/mm39.ncbiRefSeq.gtf.gz
-wget -P data/ http://hgdownload.soe.ucsc.edu/goldenPath/mm39/bigZips/mm39.fa.gz
-gunzip data/mm39.ncbiRefSeq.gtf.gz
-gunzip data/mm39.fa.gz
-wget -P data/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR137/001/SRR1374921/SRR1374921.fastq.gz
-wget -P data/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR137/002/SRR1374922/SRR1374922.fastq.gz
-wget -P data/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR137/003/SRR1374923/SRR1374923.fastq.gz
-wget -P data/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR137/004/SRR1374924/SRR1374924.fastq.gz
+# For single-ends
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR840/007/SRR8405197/SRR8405197.fastq.gz
+
+# For paired-ends
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR840/007/SRR8405197/SRR8405197_2.fastq.gz
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR840/007/SRR8405197/SRR8405197_1.fastq.gz
+
+# For reference genome (if needed)
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz
+
+# For gene annotation (if needed)
+# refer to https://www.gencodegenes.org/human/release_36.html
 ```
 
-##### Analyze with AutoBA
-
-```shell
-python app.py --config ./examples/case1.1/config.yaml --openai YOUR_OPENAI_API --model gpt-4
-python app.py --config ./examples/case1.1/config.yaml --model codellama-7bi
-python app.py --config ./examples/case1.1/config.yaml --model codellama-13bi
-python app.py --config ./examples/case1.1/config.yaml --model codellama-34bi
-```
 
 ## Citation
 
@@ -134,4 +194,3 @@ If you find this project useful in your research, please consider citing:
 ## License
 
 This project is released under the MIT license.
-# BioinfoMCP
