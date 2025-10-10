@@ -202,8 +202,13 @@ wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRC
 
 If you find this project useful in your research, please consider citing:
 
-...
-
+title={BioinfoMCP: A Unified Platform Enabling MCP Interfaces in Agentic Bioinformatics}, 
+author={Florensia Widjaja and Zhangtianyi Chen and Juexiao Zhou},
+year={2025},
+eprint={2510.02139},
+archivePrefix={arXiv},
+primaryClass={q-bio.QM},
+url={https://arxiv.org/abs/2510.02139}, 
 
 ## License
 
