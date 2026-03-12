@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}Search{% endblock %}
+{% block content %}
+<!-- ========== 统一搜索栏 ========== -->
+<div class="row justify-content-center">
+  <div class="col-lg-8">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold text-primary">Search Datasets, Tools & Papers</h2>
+      <p class="text-muted">One search bar for everything.</p>
+    </div>
+
+    <!-- 搜索框 -->
+    <form id="searchForm" class="input-group input-group-lg shadow-sm">
+      <input type="text"
+             id="searchInput"
+             class="form-control"
+             placeholder="关键词 (如 SARS-CoV-2, CRISPR, scRNA-seq)">
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+
+    <!-- 快捷入口 -->
+    <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+      <a class="btn btn-sm btn-outline-secondary" href="https://www.ncbi.nlm.nih.gov/datasets/" target="_blank">NCBI Datasets</a>
+      <a class="btn btn-sm btn-outline-secondary" href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a>
+      <a class="btn btn-sm btn-outline-secondary" href="https://www.biorxiv.org/" target="_blank">bioRxiv</a>
+      <a class="btn btn-sm btn-outline-secondary" href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 结果区 ========== -->
+<div class="row mt-5">
+  <div class="col-12">
+    <ul id="resultList" class="list-group"></ul>
+  </div>
+</div>
+
+<script>
+/* ---------- 统一搜索 ---------- */
+document.getElementById('searchForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const q = document.getElementById('searchInput').value.trim();
+  if (!q) return;
+  const list = document.getElementById('resultList');
+  list.innerHTML = '<li class="list-group-item">Loading…</li>';
+
+  /* ① NCBI Datasets (taxonomy) */
+  try {
+    const r = await fetch(`https://api.ncbi.nlm.nih.gov/datasets/v2alpha/taxonomy/name/${encodeURIComponent(q)}`);
+    const data = await r.json();
+    list.innerHTML = '';
+    (data.taxonomies || []).forEach(t => {
+      list.innerHTML += `
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div>
+            <div class="fw-bold">${t.name}</div>
+            <span class="text-muted">TaxID: ${t.tax_id} · ${t.rank || ''}</span>
+          </div>
+          <a class="btn btn-sm btn-outline-primary" href="https://www.ncbi.nlm.nih.gov/datasets/taxonomy/${t.tax_id}/" target="_blank">Browse</a>
+        </li>`;
+    });
+    if (!data.taxonomies.length) list.innerHTML = '<li class="list-group-item">No datasets found.</li>';
+  } catch (e) {
+    list.innerHTML = '<li class="list-group-item text-danger">API error: ' + e.message + '</li>';
+  }
+});
+</script>
+{% endblock %}

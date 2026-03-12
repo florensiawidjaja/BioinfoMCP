@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block title %}MCP Market{% endblock %}
+{% block content %}
+<h2 class="mb-4">Available Bioinfo MCP Servers</h2>
+<div class="row g-4">
+  <!-- ====== 权威/官方示例 ====== -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">FastQC-MCP</h5>
+        <p class="text-muted mb-2">Quality control reports</p>
+        <a class="btn btn-sm btn-outline-primary" href="#">Install</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Bowtie2-MCP</h5>
+        <p class="text-muted mb-2">Ultrafast alignment</p>
+        <a class="btn btn-sm btn-outline-primary" href="#">Install</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Samtools-MCP</h5>
+        <p class="text-muted mb-2">Manipulate alignments</p>
+        <a class="btn btn-sm btn-outline-primary" href="#">Install</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 真实公开 MCP Server ====== -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">LAS-MCP</h5>
+        <p class="text-muted mb-2">多模态数据集管理及清洗（火山引擎）</p>
+        <a class="btn btn-sm btn-outline-primary" href="https://github.com/volcengine/mcp-server" target="_blank">源码</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">ByteHouse-MCP</h5>
+        <p class="text-muted mb-2">LLM 与 ByteHouse 协同，SQL 生成 & 集群运维</p>
+        <a class="btn btn-sm btn-outline-primary" href="https://github.com/volcengine/mcp-server" target="_blank">源码</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">VMP-MCP</h5>
+        <p class="text-muted mb-2">自然语言查询 Prometheus 指标</p>
+        <a class="btn btn-sm btn-outline-primary" href="https://github.com/volcengine/mcp-server" target="_blank">源码</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Demo-Weather-MCP</h5>
+        <p class="text-muted mb-2">Spring AI 官方示例：天气查询 + 加法工具</p>
+        <a class="btn btn-sm btn-outline-primary" href="https://github.com/spring-projects/spring-ai" target="_blank">源码</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Brave-Search-MCP</h5>
+        <p class="text-muted mb-2">Brave Search API 封装，Web + 本地搜索</p>
+        <a class="btn btn-sm btn-outline-primary" href="https://github.com/modelcontextprotocol/servers" target="_blank">源码</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Meilisearch-MCP</h5>
+        <p class="text-muted mb-2">全文 & 语义搜索 Meilisearch 驱动</p>
+        <a class="btn btn-sm btn-outline-primary" href="https://github.com/modelcontextprotocol/servers" target="_blank">源码</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Elasticsearch-MCP</h5>
+        <p class="text-muted mb-2">与 ES 集群交互，索引/搜索/聚合</p>
+        <a class="btn btn-sm btn-outline-primary" href="https://github.com/modelcontextprotocol/servers" target="_blank">源码</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Qdrant-MCP</h5>
+        <p class="text-muted mb-2">语义记忆层，向量搜索引擎</p>
+        <a class="btn btn-sm btn-outline-primary" href="https://github.com/modelcontextprotocol/servers" target="_blank">源码</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">OpenAPI→MCP</h5>
+        <p class="text-muted mb-2">自动把 OpenAPI 3.0 规范转成 MCP Server</p>
+        <a class="btn btn-sm btn-outline-primary" href="https://mcp.aibase.com/zh/server/1917146826664505346" target="_blank">工具</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 提示更多 ====== -->
+<div class="text-center mt-5">
+  <p class="text-muted">更多服务器持续上架中…</p>
+  <a class="btn btn-primary" href="https://github.com/modelcontextprotocol/servers" target="_blank">浏览官方仓库</a>
+</div>
+{% endblock %}

@@ -1,0 +1,827 @@
+[2025-10-30 15:10:07 +0800] [94914] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 15:10:07 +0800] [94914] [INFO] Listening at: http://127.0.0.1:8000 (94914)
+[2025-10-30 15:10:07 +0800] [94914] [INFO] Using worker: sync
+[2025-10-30 15:10:07 +0800] [94915] [INFO] Booting worker with pid: 94915
+[2025-10-30 15:10:07 +0800] [94916] [INFO] Booting worker with pid: 94916
+[2025-10-30 15:10:08 +0800] [94917] [INFO] Booting worker with pid: 94917
+[2025-10-30 15:10:08 +0800] [94918] [INFO] Booting worker with pid: 94918
+[2025-10-30 15:46:41 +0800] [94914] [INFO] Handling signal: term
+[2025-10-30 15:46:41 +0800] [94917] [INFO] Worker exiting (pid: 94917)
+[2025-10-30 15:46:41 +0800] [94915] [INFO] Worker exiting (pid: 94915)
+[2025-10-30 15:46:41 +0800] [94916] [INFO] Worker exiting (pid: 94916)
+[2025-10-30 15:46:41 +0800] [94918] [INFO] Worker exiting (pid: 94918)
+[2025-10-30 15:46:41 +0800] [94914] [INFO] Shutting down: Master
+[2025-10-30 15:50:52 +0800] [96492] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 15:50:52 +0800] [96492] [INFO] Listening at: http://127.0.0.1:8000 (96492)
+[2025-10-30 15:50:52 +0800] [96492] [INFO] Using worker: sync
+[2025-10-30 15:50:52 +0800] [96493] [INFO] Booting worker with pid: 96493
+[2025-10-30 15:50:52 +0800] [96494] [INFO] Booting worker with pid: 96494
+[2025-10-30 15:50:52 +0800] [96495] [INFO] Booting worker with pid: 96495
+[2025-10-30 15:50:52 +0800] [96494] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 66, in <module>
+    def index():
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: index
+[2025-10-30 15:50:52 +0800] [96493] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 66, in <module>
+    def index():
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: index
+[2025-10-30 15:50:52 +0800] [96494] [INFO] Worker exiting (pid: 96494)
+[2025-10-30 15:50:52 +0800] [96493] [INFO] Worker exiting (pid: 96493)
+[2025-10-30 15:50:53 +0800] [96492] [ERROR] Worker (pid:96494) exited with code 3
+[2025-10-30 15:50:53 +0800] [96495] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 66, in <module>
+    def index():
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: index
+[2025-10-30 15:50:53 +0800] [96495] [INFO] Worker exiting (pid: 96495)
+[2025-10-30 15:50:53 +0800] [96492] [ERROR] Worker (pid:96495) exited with code 3
+[2025-10-30 15:52:30 +0800] [96592] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 15:52:30 +0800] [96592] [INFO] Listening at: http://127.0.0.1:8000 (96592)
+[2025-10-30 15:52:30 +0800] [96592] [INFO] Using worker: sync
+[2025-10-30 15:52:30 +0800] [96593] [INFO] Booting worker with pid: 96593
+[2025-10-30 15:52:30 +0800] [96594] [INFO] Booting worker with pid: 96594
+[2025-10-30 15:52:30 +0800] [96595] [INFO] Booting worker with pid: 96595
+[2025-10-30 15:52:30 +0800] [96593] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 66, in <module>
+    def index():
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: index
+[2025-10-30 15:52:30 +0800] [96593] [INFO] Worker exiting (pid: 96593)
+[2025-10-30 15:52:30 +0800] [96594] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 66, in <module>
+    def index():
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: index
+[2025-10-30 15:52:30 +0800] [96594] [INFO] Worker exiting (pid: 96594)
+[2025-10-30 15:52:30 +0800] [96596] [INFO] Booting worker with pid: 96596
+[2025-10-30 15:52:30 +0800] [96592] [ERROR] Worker (pid:96593) exited with code 3
+[2025-10-30 15:52:30 +0800] [96592] [ERROR] Worker (pid:96594) exited with code 3
+[2025-10-30 15:52:30 +0800] [96595] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 66, in <module>
+    def index():
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: index
+[2025-10-30 15:52:30 +0800] [96595] [INFO] Worker exiting (pid: 96595)
+[2025-10-30 15:52:30 +0800] [96596] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 66, in <module>
+    def index():
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/sansio/app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: index
+[2025-10-30 15:52:30 +0800] [96596] [INFO] Worker exiting (pid: 96596)
+[2025-10-30 16:00:32 +0800] [96810] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:00:32 +0800] [96810] [INFO] Listening at: http://127.0.0.1:8000 (96810)
+[2025-10-30 16:00:32 +0800] [96810] [INFO] Using worker: sync
+[2025-10-30 16:00:32 +0800] [96811] [INFO] Booting worker with pid: 96811
+[2025-10-30 16:00:32 +0800] [96812] [INFO] Booting worker with pid: 96812
+[2025-10-30 16:00:32 +0800] [96813] [INFO] Booting worker with pid: 96813
+[2025-10-30 16:00:32 +0800] [96814] [INFO] Booting worker with pid: 96814
+[2025-10-30 16:04:44 +0800] [96811] [INFO] Worker exiting (pid: 96811)
+[2025-10-30 16:04:44 +0800] [96810] [INFO] Handling signal: term
+[2025-10-30 16:04:44 +0800] [96813] [INFO] Worker exiting (pid: 96813)
+[2025-10-30 16:04:44 +0800] [96814] [INFO] Worker exiting (pid: 96814)
+[2025-10-30 16:04:44 +0800] [96812] [INFO] Worker exiting (pid: 96812)
+[2025-10-30 16:04:44 +0800] [96810] [INFO] Shutting down: Master
+[2025-10-30 16:04:53 +0800] [96955] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:04:53 +0800] [96955] [INFO] Listening at: http://127.0.0.1:8000 (96955)
+[2025-10-30 16:04:53 +0800] [96955] [INFO] Using worker: sync
+[2025-10-30 16:04:53 +0800] [96956] [INFO] Booting worker with pid: 96956
+[2025-10-30 16:04:53 +0800] [96957] [INFO] Booting worker with pid: 96957
+[2025-10-30 16:04:53 +0800] [96958] [INFO] Booting worker with pid: 96958
+[2025-10-30 16:04:53 +0800] [96959] [INFO] Booting worker with pid: 96959
+[2025-10-30 16:05:41 +0800] [96955] [INFO] Handling signal: int
+[2025-10-30 16:05:41 +0800] [96959] [INFO] Worker exiting (pid: 96959)
+[2025-10-30 16:05:41 +0800] [96956] [INFO] Worker exiting (pid: 96956)
+[2025-10-30 16:05:41 +0800] [96958] [INFO] Worker exiting (pid: 96958)
+[2025-10-30 16:05:41 +0800] [96957] [INFO] Worker exiting (pid: 96957)
+[2025-10-30 16:05:41 +0800] [96955] [INFO] Shutting down: Master
+[2025-10-30 16:06:46 +0800] [97011] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:06:46 +0800] [97011] [INFO] Listening at: http://127.0.0.1:8000 (97011)
+[2025-10-30 16:06:46 +0800] [97011] [INFO] Using worker: sync
+[2025-10-30 16:06:46 +0800] [97012] [INFO] Booting worker with pid: 97012
+[2025-10-30 16:06:46 +0800] [97013] [INFO] Booting worker with pid: 97013
+[2025-10-30 16:06:46 +0800] [97014] [INFO] Booting worker with pid: 97014
+[2025-10-30 16:06:46 +0800] [97015] [INFO] Booting worker with pid: 97015
+[2025-10-30 16:07:54 +0800] [97011] [INFO] Handling signal: int
+[2025-10-30 16:07:54 +0800] [97012] [INFO] Worker exiting (pid: 97012)
+[2025-10-30 16:07:54 +0800] [97013] [INFO] Worker exiting (pid: 97013)
+[2025-10-30 16:07:54 +0800] [97015] [INFO] Worker exiting (pid: 97015)
+[2025-10-30 16:07:54 +0800] [97014] [INFO] Worker exiting (pid: 97014)
+[2025-10-30 16:07:54 +0800] [97011] [ERROR] Worker (pid:97013) was sent SIGINT!
+[2025-10-30 16:07:54 +0800] [97011] [ERROR] Worker (pid:97012) was sent SIGINT!
+[2025-10-30 16:07:54 +0800] [97011] [ERROR] Worker (pid:97014) was sent SIGINT!
+[2025-10-30 16:07:54 +0800] [97011] [ERROR] Worker (pid:97015) was sent SIGINT!
+[2025-10-30 16:07:54 +0800] [97011] [INFO] Shutting down: Master
+[2025-10-30 16:12:16 +0800] [97209] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:12:16 +0800] [97209] [INFO] Listening at: http://127.0.0.1:8000 (97209)
+[2025-10-30 16:12:16 +0800] [97209] [INFO] Using worker: sync
+[2025-10-30 16:12:16 +0800] [97210] [INFO] Booting worker with pid: 97210
+[2025-10-30 16:12:16 +0800] [97211] [INFO] Booting worker with pid: 97211
+[2025-10-30 16:12:16 +0800] [97212] [INFO] Booting worker with pid: 97212
+[2025-10-30 16:12:16 +0800] [97213] [INFO] Booting worker with pid: 97213
+[2025-10-30 16:16:39 +0800] [97209] [INFO] Handling signal: int
+[2025-10-30 16:16:39 +0800] [97212] [INFO] Worker exiting (pid: 97212)
+[2025-10-30 16:16:39 +0800] [97213] [INFO] Worker exiting (pid: 97213)
+[2025-10-30 16:16:39 +0800] [97210] [INFO] Worker exiting (pid: 97210)
+[2025-10-30 16:16:39 +0800] [97211] [INFO] Worker exiting (pid: 97211)
+[2025-10-30 16:16:39 +0800] [97209] [INFO] Shutting down: Master
+[2025-10-30 16:16:46 +0800] [97342] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:16:46 +0800] [97342] [INFO] Listening at: http://127.0.0.1:8000 (97342)
+[2025-10-30 16:16:46 +0800] [97342] [INFO] Using worker: sync
+[2025-10-30 16:16:46 +0800] [97343] [INFO] Booting worker with pid: 97343
+[2025-10-30 16:16:46 +0800] [97344] [INFO] Booting worker with pid: 97344
+[2025-10-30 16:16:46 +0800] [97345] [INFO] Booting worker with pid: 97345
+[2025-10-30 16:16:46 +0800] [97346] [INFO] Booting worker with pid: 97346
+[2025-10-30 16:20:54 +0800] [97342] [INFO] Handling signal: int
+[2025-10-30 16:20:54 +0800] [97344] [INFO] Worker exiting (pid: 97344)
+[2025-10-30 16:20:54 +0800] [97345] [INFO] Worker exiting (pid: 97345)
+[2025-10-30 16:20:54 +0800] [97346] [INFO] Worker exiting (pid: 97346)
+[2025-10-30 16:20:54 +0800] [97343] [INFO] Worker exiting (pid: 97343)
+[2025-10-30 16:20:55 +0800] [97342] [INFO] Shutting down: Master
+[2025-10-30 16:20:58 +0800] [97460] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:20:58 +0800] [97460] [INFO] Listening at: http://127.0.0.1:8000 (97460)
+[2025-10-30 16:20:58 +0800] [97460] [INFO] Using worker: sync
+[2025-10-30 16:20:58 +0800] [97461] [INFO] Booting worker with pid: 97461
+[2025-10-30 16:20:58 +0800] [97462] [INFO] Booting worker with pid: 97462
+[2025-10-30 16:20:58 +0800] [97463] [INFO] Booting worker with pid: 97463
+[2025-10-30 16:20:58 +0800] [97464] [INFO] Booting worker with pid: 97464
+[2025-10-30 16:25:12 +0800] [97460] [INFO] Handling signal: int
+[2025-10-30 16:25:12 +0800] [97462] [INFO] Worker exiting (pid: 97462)
+[2025-10-30 16:25:12 +0800] [97461] [INFO] Worker exiting (pid: 97461)
+[2025-10-30 16:25:12 +0800] [97464] [INFO] Worker exiting (pid: 97464)
+[2025-10-30 16:25:12 +0800] [97463] [INFO] Worker exiting (pid: 97463)
+[2025-10-30 16:25:12 +0800] [97460] [ERROR] Worker (pid:97463) was sent SIGINT!
+[2025-10-30 16:25:12 +0800] [97460] [ERROR] Worker (pid:97462) was sent SIGINT!
+[2025-10-30 16:25:12 +0800] [97460] [ERROR] Worker (pid:97461) was sent SIGINT!
+[2025-10-30 16:25:12 +0800] [97460] [ERROR] Worker (pid:97464) was sent SIGINT!
+[2025-10-30 16:25:12 +0800] [97460] [INFO] Shutting down: Master
+[2025-10-30 16:25:15 +0800] [97608] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:25:15 +0800] [97608] [INFO] Listening at: http://127.0.0.1:8000 (97608)
+[2025-10-30 16:25:15 +0800] [97608] [INFO] Using worker: sync
+[2025-10-30 16:25:15 +0800] [97609] [INFO] Booting worker with pid: 97609
+[2025-10-30 16:25:15 +0800] [97610] [INFO] Booting worker with pid: 97610
+[2025-10-30 16:25:15 +0800] [97611] [INFO] Booting worker with pid: 97611
+[2025-10-30 16:25:15 +0800] [97612] [INFO] Booting worker with pid: 97612
+[2025-10-30 16:30:04 +0800] [97608] [INFO] Handling signal: int
+[2025-10-30 16:30:04 +0800] [97612] [INFO] Worker exiting (pid: 97612)
+[2025-10-30 16:30:04 +0800] [97610] [INFO] Worker exiting (pid: 97610)
+[2025-10-30 16:30:04 +0800] [97611] [INFO] Worker exiting (pid: 97611)
+[2025-10-30 16:30:04 +0800] [97609] [INFO] Worker exiting (pid: 97609)
+[2025-10-30 16:30:05 +0800] [97608] [ERROR] Worker (pid:97611) was sent SIGINT!
+[2025-10-30 16:30:05 +0800] [97608] [ERROR] Worker (pid:97609) was sent SIGINT!
+[2025-10-30 16:30:05 +0800] [97608] [ERROR] Worker (pid:97610) was sent SIGINT!
+[2025-10-30 16:30:05 +0800] [97608] [ERROR] Worker (pid:97612) was sent SIGINT!
+[2025-10-30 16:30:05 +0800] [97608] [INFO] Shutting down: Master
+[2025-10-30 16:30:08 +0800] [97791] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:30:08 +0800] [97791] [INFO] Listening at: http://127.0.0.1:8000 (97791)
+[2025-10-30 16:30:08 +0800] [97791] [INFO] Using worker: sync
+[2025-10-30 16:30:08 +0800] [97792] [INFO] Booting worker with pid: 97792
+[2025-10-30 16:30:08 +0800] [97793] [INFO] Booting worker with pid: 97793
+[2025-10-30 16:30:08 +0800] [97794] [INFO] Booting worker with pid: 97794
+[2025-10-30 16:30:08 +0800] [97795] [INFO] Booting worker with pid: 97795
+[2025-10-30 16:34:10 +0800] [97791] [INFO] Handling signal: int
+[2025-10-30 16:34:10 +0800] [97794] [INFO] Worker exiting (pid: 97794)
+[2025-10-30 16:34:10 +0800] [97793] [INFO] Worker exiting (pid: 97793)
+[2025-10-30 16:34:10 +0800] [97795] [INFO] Worker exiting (pid: 97795)
+[2025-10-30 16:34:10 +0800] [97792] [INFO] Worker exiting (pid: 97792)
+[2025-10-30 16:34:10 +0800] [97791] [ERROR] Worker (pid:97795) was sent SIGINT!
+[2025-10-30 16:34:10 +0800] [97791] [ERROR] Worker (pid:97792) was sent SIGINT!
+[2025-10-30 16:34:10 +0800] [97791] [ERROR] Worker (pid:97793) was sent SIGINT!
+[2025-10-30 16:34:10 +0800] [97791] [ERROR] Worker (pid:97794) was sent SIGINT!
+[2025-10-30 16:34:10 +0800] [97791] [INFO] Shutting down: Master
+[2025-10-30 16:34:13 +0800] [97989] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:34:13 +0800] [97989] [INFO] Listening at: http://127.0.0.1:8000 (97989)
+[2025-10-30 16:34:13 +0800] [97989] [INFO] Using worker: sync
+[2025-10-30 16:34:13 +0800] [97990] [INFO] Booting worker with pid: 97990
+[2025-10-30 16:34:13 +0800] [97991] [INFO] Booting worker with pid: 97991
+[2025-10-30 16:34:13 +0800] [97992] [INFO] Booting worker with pid: 97992
+[2025-10-30 16:34:13 +0800] [97993] [INFO] Booting worker with pid: 97993
+[2025-10-30 16:36:06 +0800] [97989] [INFO] Handling signal: int
+[2025-10-30 16:36:06 +0800] [97990] [INFO] Worker exiting (pid: 97990)
+[2025-10-30 16:36:06 +0800] [97992] [INFO] Worker exiting (pid: 97992)
+[2025-10-30 16:36:06 +0800] [97991] [INFO] Worker exiting (pid: 97991)
+[2025-10-30 16:36:06 +0800] [97993] [INFO] Worker exiting (pid: 97993)
+[2025-10-30 16:36:06 +0800] [97989] [INFO] Shutting down: Master
+[2025-10-30 16:36:08 +0800] [98055] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:36:08 +0800] [98055] [INFO] Listening at: http://127.0.0.1:8000 (98055)
+[2025-10-30 16:36:08 +0800] [98055] [INFO] Using worker: sync
+[2025-10-30 16:36:08 +0800] [98056] [INFO] Booting worker with pid: 98056
+[2025-10-30 16:36:08 +0800] [98057] [INFO] Booting worker with pid: 98057
+[2025-10-30 16:36:08 +0800] [98058] [INFO] Booting worker with pid: 98058
+[2025-10-30 16:36:09 +0800] [98059] [INFO] Booting worker with pid: 98059
+[2025-10-30 16:39:11 +0800] [98055] [INFO] Handling signal: int
+[2025-10-30 16:39:11 +0800] [98057] [INFO] Worker exiting (pid: 98057)
+[2025-10-30 16:39:11 +0800] [98056] [INFO] Worker exiting (pid: 98056)
+[2025-10-30 16:39:11 +0800] [98059] [INFO] Worker exiting (pid: 98059)
+[2025-10-30 16:39:11 +0800] [98058] [INFO] Worker exiting (pid: 98058)
+[2025-10-30 16:39:11 +0800] [98055] [ERROR] Worker (pid:98057) was sent SIGINT!
+[2025-10-30 16:39:11 +0800] [98055] [ERROR] Worker (pid:98056) was sent SIGINT!
+[2025-10-30 16:39:11 +0800] [98055] [ERROR] Worker (pid:98058) was sent SIGINT!
+[2025-10-30 16:39:11 +0800] [98055] [ERROR] Worker (pid:98059) was sent SIGINT!
+[2025-10-30 16:39:11 +0800] [98055] [INFO] Shutting down: Master
+[2025-10-30 16:39:14 +0800] [98124] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:39:14 +0800] [98124] [INFO] Listening at: http://127.0.0.1:8000 (98124)
+[2025-10-30 16:39:14 +0800] [98124] [INFO] Using worker: sync
+[2025-10-30 16:39:14 +0800] [98125] [INFO] Booting worker with pid: 98125
+[2025-10-30 16:39:14 +0800] [98126] [INFO] Booting worker with pid: 98126
+[2025-10-30 16:39:14 +0800] [98127] [INFO] Booting worker with pid: 98127
+[2025-10-30 16:39:14 +0800] [98128] [INFO] Booting worker with pid: 98128
+[2025-10-30 16:41:39 +0800] [98124] [INFO] Handling signal: int
+[2025-10-30 16:41:39 +0800] [98128] [INFO] Worker exiting (pid: 98128)
+[2025-10-30 16:41:39 +0800] [98126] [INFO] Worker exiting (pid: 98126)
+[2025-10-30 16:41:39 +0800] [98125] [INFO] Worker exiting (pid: 98125)
+[2025-10-30 16:41:39 +0800] [98127] [INFO] Worker exiting (pid: 98127)
+[2025-10-30 16:41:39 +0800] [98124] [ERROR] Worker (pid:98127) was sent SIGINT!
+[2025-10-30 16:41:39 +0800] [98124] [ERROR] Worker (pid:98126) was sent SIGINT!
+[2025-10-30 16:41:39 +0800] [98124] [ERROR] Worker (pid:98128) was sent SIGINT!
+[2025-10-30 16:41:39 +0800] [98124] [ERROR] Worker (pid:98125) was sent SIGINT!
+[2025-10-30 16:41:39 +0800] [98124] [INFO] Shutting down: Master
+[2025-10-30 16:41:50 +0800] [98248] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:41:50 +0800] [98248] [INFO] Listening at: http://127.0.0.1:8000 (98248)
+[2025-10-30 16:41:50 +0800] [98248] [INFO] Using worker: sync
+[2025-10-30 16:41:50 +0800] [98249] [INFO] Booting worker with pid: 98249
+[2025-10-30 16:41:50 +0800] [98250] [INFO] Booting worker with pid: 98250
+[2025-10-30 16:41:50 +0800] [98251] [INFO] Booting worker with pid: 98251
+[2025-10-30 16:41:50 +0800] [98252] [INFO] Booting worker with pid: 98252
+[2025-10-30 16:42:04 +0800] [98248] [INFO] Handling signal: int
+[2025-10-30 16:42:04 +0800] [98249] [INFO] Worker exiting (pid: 98249)
+[2025-10-30 16:42:04 +0800] [98250] [INFO] Worker exiting (pid: 98250)
+[2025-10-30 16:42:04 +0800] [98252] [INFO] Worker exiting (pid: 98252)
+[2025-10-30 16:42:04 +0800] [98251] [INFO] Worker exiting (pid: 98251)
+[2025-10-30 16:42:04 +0800] [98248] [ERROR] Worker (pid:98250) was sent SIGINT!
+[2025-10-30 16:42:04 +0800] [98248] [ERROR] Worker (pid:98249) was sent SIGINT!
+[2025-10-30 16:42:04 +0800] [98248] [ERROR] Worker (pid:98251) was sent SIGINT!
+[2025-10-30 16:42:04 +0800] [98248] [ERROR] Worker (pid:98252) was sent SIGINT!
+[2025-10-30 16:42:04 +0800] [98248] [INFO] Shutting down: Master
+[2025-10-30 16:42:07 +0800] [98289] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:42:07 +0800] [98289] [INFO] Listening at: http://127.0.0.1:8000 (98289)
+[2025-10-30 16:42:07 +0800] [98289] [INFO] Using worker: sync
+[2025-10-30 16:42:07 +0800] [98290] [INFO] Booting worker with pid: 98290
+[2025-10-30 16:42:07 +0800] [98291] [INFO] Booting worker with pid: 98291
+[2025-10-30 16:42:07 +0800] [98292] [INFO] Booting worker with pid: 98292
+[2025-10-30 16:42:07 +0800] [98293] [INFO] Booting worker with pid: 98293
+[2025-10-30 16:50:01 +0800] [98289] [INFO] Handling signal: int
+[2025-10-30 16:50:01 +0800] [98293] [INFO] Worker exiting (pid: 98293)
+[2025-10-30 16:50:01 +0800] [98291] [INFO] Worker exiting (pid: 98291)
+[2025-10-30 16:50:01 +0800] [98292] [INFO] Worker exiting (pid: 98292)
+[2025-10-30 16:50:01 +0800] [98290] [INFO] Worker exiting (pid: 98290)
+[2025-10-30 16:50:01 +0800] [98289] [ERROR] Worker (pid:98291) was sent SIGINT!
+[2025-10-30 16:50:01 +0800] [98289] [ERROR] Worker (pid:98290) was sent SIGINT!
+[2025-10-30 16:50:01 +0800] [98289] [ERROR] Worker (pid:98292) was sent SIGINT!
+[2025-10-30 16:50:01 +0800] [98289] [ERROR] Worker (pid:98293) was sent SIGINT!
+[2025-10-30 16:50:01 +0800] [98289] [INFO] Shutting down: Master
+[2025-10-30 16:50:04 +0800] [98536] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:50:04 +0800] [98536] [INFO] Listening at: http://127.0.0.1:8000 (98536)
+[2025-10-30 16:50:04 +0800] [98536] [INFO] Using worker: sync
+[2025-10-30 16:50:04 +0800] [98537] [INFO] Booting worker with pid: 98537
+[2025-10-30 16:50:04 +0800] [98538] [INFO] Booting worker with pid: 98538
+[2025-10-30 16:50:04 +0800] [98539] [INFO] Booting worker with pid: 98539
+[2025-10-30 16:50:04 +0800] [98540] [INFO] Booting worker with pid: 98540
+[2025-10-30 16:53:27 +0800] [98536] [INFO] Handling signal: int
+[2025-10-30 16:53:27 +0800] [98538] [INFO] Worker exiting (pid: 98538)
+[2025-10-30 16:53:27 +0800] [98540] [INFO] Worker exiting (pid: 98540)
+[2025-10-30 16:53:27 +0800] [98537] [INFO] Worker exiting (pid: 98537)
+[2025-10-30 16:53:27 +0800] [98539] [INFO] Worker exiting (pid: 98539)
+[2025-10-30 16:53:27 +0800] [98536] [ERROR] Worker (pid:98540) was sent SIGINT!
+[2025-10-30 16:53:27 +0800] [98536] [ERROR] Worker (pid:98539) was sent SIGINT!
+[2025-10-30 16:53:27 +0800] [98536] [INFO] Shutting down: Master
+[2025-10-30 16:53:31 +0800] [98635] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:53:31 +0800] [98635] [INFO] Listening at: http://127.0.0.1:8000 (98635)
+[2025-10-30 16:53:31 +0800] [98635] [INFO] Using worker: sync
+[2025-10-30 16:53:31 +0800] [98636] [INFO] Booting worker with pid: 98636
+[2025-10-30 16:53:31 +0800] [98637] [INFO] Booting worker with pid: 98637
+[2025-10-30 16:53:31 +0800] [98638] [INFO] Booting worker with pid: 98638
+[2025-10-30 16:53:31 +0800] [98639] [INFO] Booting worker with pid: 98639
+[2025-10-30 16:53:56 +0800] [98635] [INFO] Handling signal: int
+[2025-10-30 16:53:56 +0800] [98638] [INFO] Worker exiting (pid: 98638)
+[2025-10-30 16:53:56 +0800] [98639] [INFO] Worker exiting (pid: 98639)
+[2025-10-30 16:53:56 +0800] [98637] [INFO] Worker exiting (pid: 98637)
+[2025-10-30 16:53:56 +0800] [98636] [INFO] Worker exiting (pid: 98636)
+[2025-10-30 16:53:56 +0800] [98635] [INFO] Shutting down: Master
+[2025-10-30 16:54:00 +0800] [98682] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:54:00 +0800] [98682] [INFO] Listening at: http://127.0.0.1:8000 (98682)
+[2025-10-30 16:54:00 +0800] [98682] [INFO] Using worker: sync
+[2025-10-30 16:54:00 +0800] [98683] [INFO] Booting worker with pid: 98683
+[2025-10-30 16:54:00 +0800] [98684] [INFO] Booting worker with pid: 98684
+[2025-10-30 16:54:00 +0800] [98685] [INFO] Booting worker with pid: 98685
+[2025-10-30 16:54:00 +0800] [98686] [INFO] Booting worker with pid: 98686
+[2025-10-30 16:57:14 +0800] [98682] [INFO] Handling signal: int
+[2025-10-30 16:57:14 +0800] [98684] [INFO] Worker exiting (pid: 98684)
+[2025-10-30 16:57:14 +0800] [98686] [INFO] Worker exiting (pid: 98686)
+[2025-10-30 16:57:14 +0800] [98685] [INFO] Worker exiting (pid: 98685)
+[2025-10-30 16:57:14 +0800] [98683] [INFO] Worker exiting (pid: 98683)
+[2025-10-30 16:57:14 +0800] [98682] [INFO] Shutting down: Master
+[2025-10-30 16:57:18 +0800] [98802] [INFO] Starting gunicorn 23.0.0
+[2025-10-30 16:57:18 +0800] [98802] [INFO] Listening at: http://127.0.0.1:8000 (98802)
+[2025-10-30 16:57:18 +0800] [98802] [INFO] Using worker: sync
+[2025-10-30 16:57:18 +0800] [98803] [INFO] Booting worker with pid: 98803
+[2025-10-30 16:57:18 +0800] [98804] [INFO] Booting worker with pid: 98804
+[2025-10-30 16:57:18 +0800] [98805] [INFO] Booting worker with pid: 98805
+[2025-10-30 16:57:18 +0800] [98806] [INFO] Booting worker with pid: 98806
+[2025-10-30 16:58:35 +0800] [98802] [INFO] Handling signal: int
+[2025-10-30 16:58:35 +0800] [98806] [INFO] Worker exiting (pid: 98806)
+[2025-10-30 16:58:35 +0800] [98805] [INFO] Worker exiting (pid: 98805)
+[2025-10-30 16:58:35 +0800] [98803] [INFO] Worker exiting (pid: 98803)
+[2025-10-30 16:58:35 +0800] [98804] [INFO] Worker exiting (pid: 98804)
+[2025-10-30 16:58:35 +0800] [98802] [ERROR] Worker (pid:98803) was sent SIGINT!
+[2025-10-30 16:58:35 +0800] [98802] [ERROR] Worker (pid:98804) was sent SIGINT!
+[2025-10-30 16:58:35 +0800] [98802] [INFO] Shutting down: Master
+[2025-11-08 16:57:21 +0800] [9172] [INFO] Starting gunicorn 23.0.0
+[2025-11-08 16:57:21 +0800] [9172] [INFO] Listening at: http://127.0.0.1:8000 (9172)
+[2025-11-08 16:57:21 +0800] [9172] [INFO] Using worker: sync
+[2025-11-08 16:57:21 +0800] [9173] [INFO] Booting worker with pid: 9173
+[2025-11-08 16:57:21 +0800] [9174] [INFO] Booting worker with pid: 9174
+[2025-11-08 16:57:21 +0800] [9175] [INFO] Booting worker with pid: 9175
+[2025-11-08 16:57:21 +0800] [9176] [INFO] Booting worker with pid: 9176
+[2025-11-08 16:58:30 +0800] [9172] [INFO] Handling signal: int
+[2025-11-08 16:58:30 +0800] [9174] [INFO] Worker exiting (pid: 9174)
+[2025-11-08 16:58:30 +0800] [9173] [INFO] Worker exiting (pid: 9173)
+[2025-11-08 16:58:30 +0800] [9176] [INFO] Worker exiting (pid: 9176)
+[2025-11-08 16:58:30 +0800] [9175] [INFO] Worker exiting (pid: 9175)
+[2025-11-08 16:58:30 +0800] [9172] [ERROR] Worker (pid:9176) was sent SIGINT!
+[2025-11-08 16:58:30 +0800] [9172] [ERROR] Worker (pid:9174) was sent SIGINT!
+[2025-11-08 16:58:30 +0800] [9172] [ERROR] Worker (pid:9173) was sent SIGINT!
+[2025-11-08 16:58:30 +0800] [9172] [ERROR] Worker (pid:9175) was sent SIGINT!
+[2025-11-08 16:58:30 +0800] [9172] [INFO] Shutting down: Master
+[2025-11-08 17:03:18 +0800] [10479] [INFO] Starting gunicorn 23.0.0
+[2025-11-08 17:03:18 +0800] [10479] [INFO] Listening at: http://127.0.0.1:8000 (10479)
+[2025-11-08 17:03:18 +0800] [10479] [INFO] Using worker: sync
+[2025-11-08 17:03:18 +0800] [10480] [INFO] Booting worker with pid: 10480
+[2025-11-08 17:03:18 +0800] [10481] [INFO] Booting worker with pid: 10481
+[2025-11-08 17:03:18 +0800] [10482] [INFO] Booting worker with pid: 10482
+[2025-11-08 17:03:18 +0800] [10483] [INFO] Booting worker with pid: 10483
+[2025-11-08 17:11:18 +0800] [10479] [INFO] Handling signal: int
+[2025-11-08 17:11:18 +0800] [10481] [INFO] Worker exiting (pid: 10481)
+[2025-11-08 17:11:18 +0800] [10480] [INFO] Worker exiting (pid: 10480)
+[2025-11-08 17:11:18 +0800] [10482] [INFO] Worker exiting (pid: 10482)
+[2025-11-08 17:11:18 +0800] [10483] [INFO] Worker exiting (pid: 10483)
+[2025-11-08 17:11:18 +0800] [10479] [ERROR] Worker (pid:10483) was sent SIGINT!
+[2025-11-08 17:11:18 +0800] [10479] [ERROR] Worker (pid:10480) was sent SIGINT!
+[2025-11-08 17:11:18 +0800] [10479] [ERROR] Worker (pid:10481) was sent SIGINT!
+[2025-11-08 17:11:18 +0800] [10479] [ERROR] Worker (pid:10482) was sent SIGINT!
+[2025-11-08 17:11:18 +0800] [10479] [INFO] Shutting down: Master
+[2025-11-08 17:11:20 +0800] [10885] [INFO] Starting gunicorn 23.0.0
+[2025-11-08 17:11:20 +0800] [10885] [INFO] Listening at: http://127.0.0.1:8000 (10885)
+[2025-11-08 17:11:20 +0800] [10885] [INFO] Using worker: sync
+[2025-11-08 17:11:20 +0800] [10886] [INFO] Booting worker with pid: 10886
+[2025-11-08 17:11:20 +0800] [10887] [INFO] Booting worker with pid: 10887
+[2025-11-08 17:11:20 +0800] [10888] [INFO] Booting worker with pid: 10888
+[2025-11-08 17:11:20 +0800] [10889] [INFO] Booting worker with pid: 10889
+[2025-11-08 17:24:43 +0800] [10885] [INFO] Handling signal: int
+[2025-11-08 17:24:43 +0800] [10887] [INFO] Worker exiting (pid: 10887)
+[2025-11-08 17:24:43 +0800] [10886] [INFO] Worker exiting (pid: 10886)
+[2025-11-08 17:24:43 +0800] [10888] [INFO] Worker exiting (pid: 10888)
+[2025-11-08 17:24:43 +0800] [10889] [INFO] Worker exiting (pid: 10889)
+[2025-11-08 17:24:43 +0800] [10885] [ERROR] Worker (pid:10886) was sent SIGINT!
+[2025-11-08 17:24:43 +0800] [10885] [ERROR] Worker (pid:10889) was sent SIGINT!
+[2025-11-08 17:24:43 +0800] [10885] [ERROR] Worker (pid:10887) was sent SIGINT!
+[2025-11-08 17:24:43 +0800] [10885] [ERROR] Worker (pid:10888) was sent SIGINT!
+[2025-11-08 17:24:43 +0800] [10885] [INFO] Shutting down: Master
+[2025-11-08 17:24:45 +0800] [11605] [INFO] Starting gunicorn 23.0.0
+[2025-11-08 17:24:45 +0800] [11605] [INFO] Listening at: http://127.0.0.1:8000 (11605)
+[2025-11-08 17:24:45 +0800] [11605] [INFO] Using worker: sync
+[2025-11-08 17:24:45 +0800] [11606] [INFO] Booting worker with pid: 11606
+[2025-11-08 17:24:45 +0800] [11607] [INFO] Booting worker with pid: 11607
+[2025-11-08 17:24:45 +0800] [11608] [INFO] Booting worker with pid: 11608
+[2025-11-08 17:24:45 +0800] [11609] [INFO] Booting worker with pid: 11609
+[2025-11-08 17:25:38 +0800] [11605] [INFO] Handling signal: int
+[2025-11-08 17:25:38 +0800] [11606] [INFO] Worker exiting (pid: 11606)
+[2025-11-08 17:25:38 +0800] [11609] [INFO] Worker exiting (pid: 11609)
+[2025-11-08 17:25:38 +0800] [11607] [INFO] Worker exiting (pid: 11607)
+[2025-11-08 17:25:38 +0800] [11608] [INFO] Worker exiting (pid: 11608)
+[2025-11-08 17:25:38 +0800] [11605] [ERROR] Worker (pid:11607) was sent SIGINT!
+[2025-11-08 17:25:38 +0800] [11605] [ERROR] Worker (pid:11606) was sent SIGINT!
+[2025-11-08 17:25:38 +0800] [11605] [ERROR] Worker (pid:11608) was sent SIGINT!
+[2025-11-08 17:25:38 +0800] [11605] [ERROR] Worker (pid:11609) was sent SIGINT!
+[2025-11-08 17:25:38 +0800] [11605] [INFO] Shutting down: Master
+[2025-11-08 17:25:45 +0800] [11689] [INFO] Starting gunicorn 23.0.0
+[2025-11-08 17:25:45 +0800] [11689] [INFO] Listening at: http://127.0.0.1:8000 (11689)
+[2025-11-08 17:25:45 +0800] [11689] [INFO] Using worker: sync
+[2025-11-08 17:25:45 +0800] [11690] [INFO] Booting worker with pid: 11690
+[2025-11-08 17:25:45 +0800] [11691] [INFO] Booting worker with pid: 11691
+[2025-11-08 17:25:45 +0800] [11692] [INFO] Booting worker with pid: 11692
+[2025-11-08 17:25:45 +0800] [11693] [INFO] Booting worker with pid: 11693
+[2025-11-08 18:19:30 +0800] [11689] [INFO] Handling signal: int
+[2025-11-08 18:19:30 +0800] [11692] [INFO] Worker exiting (pid: 11692)
+[2025-11-08 18:19:30 +0800] [11690] [INFO] Worker exiting (pid: 11690)
+[2025-11-08 18:19:30 +0800] [11691] [INFO] Worker exiting (pid: 11691)
+[2025-11-08 18:19:30 +0800] [11693] [INFO] Worker exiting (pid: 11693)
+[2025-11-08 18:19:30 +0800] [11689] [INFO] Shutting down: Master
+[2025-11-10 14:06:46 +0800] [87857] [INFO] Starting gunicorn 23.0.0
+[2025-11-10 14:06:46 +0800] [87857] [INFO] Listening at: http://127.0.0.1:8000 (87857)
+[2025-11-10 14:06:46 +0800] [87857] [INFO] Using worker: sync
+[2025-11-10 14:06:46 +0800] [87858] [INFO] Booting worker with pid: 87858
+[2025-11-10 14:06:46 +0800] [87859] [INFO] Booting worker with pid: 87859
+[2025-11-10 14:06:46 +0800] [87860] [INFO] Booting worker with pid: 87860
+[2025-11-10 14:06:46 +0800] [87861] [INFO] Booting worker with pid: 87861
+[2025-11-10 14:06:47 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:47 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:47 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:47 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:47 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:47 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:48 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:48 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:48 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:48 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:48 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:48 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:48 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:48 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:48 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:48 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:48 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:48 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:06:48 +0800] [87857] [INFO] Handling signal: winch
+[2025-11-10 14:07:43 +0800] [87857] [CRITICAL] WORKER TIMEOUT (pid:87861)
+[2025-11-10 14:07:43 +0800] [87861] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-11-10 14:07:43 +0800] [87861] [INFO] Worker exiting (pid: 87861)
+[2025-11-10 14:07:43 +0800] [87893] [INFO] Booting worker with pid: 87893
+[2025-11-10 14:12:17 +0800] [87857] [CRITICAL] WORKER TIMEOUT (pid:87860)
+[2025-11-10 14:12:17 +0800] [87860] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-11-10 14:12:17 +0800] [87860] [INFO] Worker exiting (pid: 87860)
+[2025-11-10 14:12:17 +0800] [88038] [INFO] Booting worker with pid: 88038
+[2025-11-10 14:14:19 +0800] [87857] [CRITICAL] WORKER TIMEOUT (pid:87858)
+[2025-11-10 14:14:19 +0800] [87858] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-11-10 14:14:19 +0800] [87858] [INFO] Worker exiting (pid: 87858)
+[2025-11-10 14:14:19 +0800] [88111] [INFO] Booting worker with pid: 88111
+[2025-11-10 17:14:44 +0800] [87857] [CRITICAL] WORKER TIMEOUT (pid:87859)
+[2025-11-10 17:14:45 +0800] [87859] [INFO] Worker exiting (pid: 87859)
+[2025-11-10 17:14:45 +0800] [87857] [ERROR] Worker (pid:87859) exited with code 1
+[2025-11-10 17:14:45 +0800] [87857] [ERROR] Worker (pid:87859) exited with code 1.
+[2025-11-10 17:14:45 +0800] [92032] [INFO] Booting worker with pid: 92032
+[2025-11-10 17:17:39 +0800] [87857] [ERROR] Worker (pid:92032) was sent SIGHUP!
+[2025-11-10 17:17:39 +0800] [87857] [ERROR] Worker (pid:88111) was sent SIGHUP!
+[2025-11-10 17:17:39 +0800] [87857] [ERROR] Worker (pid:88038) was sent SIGHUP!
+[2025-11-10 17:17:39 +0800] [87857] [ERROR] Worker (pid:87893) was sent SIGHUP!
+[2025-11-10 17:17:39 +0800] [92165] [INFO] Booting worker with pid: 92165
+[2025-11-10 17:17:39 +0800] [92167] [INFO] Booting worker with pid: 92167
+[2025-11-10 17:17:39 +0800] [92181] [INFO] Booting worker with pid: 92181
+[2025-11-10 17:17:39 +0800] [92182] [INFO] Booting worker with pid: 92182
+[2025-11-10 17:17:39 +0800] [87857] [INFO] Handling signal: hup
+[2025-11-10 17:17:39 +0800] [87857] [INFO] Hang up: Master
+[2025-11-10 17:17:39 +0800] [92183] [INFO] Booting worker with pid: 92183
+[2025-11-10 17:17:39 +0800] [92184] [INFO] Booting worker with pid: 92184
+[2025-11-10 17:17:39 +0800] [92185] [INFO] Booting worker with pid: 92185
+[2025-11-10 17:17:39 +0800] [92165] [INFO] Worker exiting (pid: 92165)
+[2025-11-10 17:17:39 +0800] [92181] [INFO] Worker exiting (pid: 92181)
+[2025-11-10 17:17:39 +0800] [92182] [INFO] Worker exiting (pid: 92182)
+[2025-11-10 17:17:39 +0800] [92167] [INFO] Worker exiting (pid: 92167)
+[2025-11-10 17:17:39 +0800] [92186] [INFO] Booting worker with pid: 92186
+[2025-11-10 17:17:39 +0800] [87857] [ERROR] Worker (pid:92167) was sent SIGTERM!
+[2025-11-10 17:17:39 +0800] [87857] [ERROR] Worker (pid:92165) was sent SIGTERM!
+[2025-11-10 17:17:39 +0800] [87857] [ERROR] Worker (pid:92182) was sent SIGTERM!
+[2025-11-10 17:17:39 +0800] [87857] [ERROR] Worker (pid:92181) was sent SIGTERM!
+[2025-11-11 20:40:04 +0800] [59409] [INFO] Starting gunicorn 23.0.0
+[2025-11-11 20:40:04 +0800] [59409] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2025-11-11 20:40:04 +0800] [59409] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 48] Address already in use
+[2025-11-11 20:40:05 +0800] [59409] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2025-11-11 20:40:05 +0800] [59409] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 48] Address already in use
+[2025-11-11 20:40:06 +0800] [59409] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2025-11-11 20:40:06 +0800] [59409] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 48] Address already in use
+[2025-11-11 20:40:07 +0800] [59409] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2025-11-11 20:40:07 +0800] [59409] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 48] Address already in use
+[2025-11-11 20:40:08 +0800] [59409] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2025-11-11 20:40:08 +0800] [59409] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 48] Address already in use
+[2025-11-11 20:40:09 +0800] [59409] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2025-11-11 20:46:08 +0800] [59990] [INFO] Starting gunicorn 23.0.0
+[2025-11-11 20:46:08 +0800] [59990] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2025-11-11 20:46:08 +0800] [59990] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 48] Address already in use
+[2025-11-11 20:46:09 +0800] [59990] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2025-11-11 20:46:09 +0800] [59990] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 48] Address already in use
+[2025-11-11 20:46:10 +0800] [59990] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2025-11-11 20:46:10 +0800] [59990] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 48] Address already in use
+[2025-11-11 20:46:11 +0800] [59990] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2025-11-11 20:46:11 +0800] [59990] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 48] Address already in use
+[2025-11-11 20:46:12 +0800] [59990] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2025-11-11 20:46:12 +0800] [59990] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 48] Address already in use
+[2025-11-11 20:46:13 +0800] [59990] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2025-11-11 20:48:19 +0800] [92184] [INFO] Worker exiting (pid: 92184)
+[2025-11-11 20:48:19 +0800] [92185] [INFO] Worker exiting (pid: 92185)
+[2025-11-11 20:48:19 +0800] [87857] [INFO] Handling signal: term
+[2025-11-11 20:48:19 +0800] [87857] [ERROR] Worker (pid:92184) was sent SIGTERM!
+[2025-11-11 20:48:19 +0800] [87857] [ERROR] Worker (pid:92185) was sent SIGTERM!
+[2025-11-11 20:48:19 +0800] [92186] [INFO] Worker exiting (pid: 92186)
+[2025-11-11 20:48:19 +0800] [92183] [INFO] Worker exiting (pid: 92183)
+[2025-11-11 20:48:19 +0800] [87857] [ERROR] Worker (pid:92183) exited with code 120
+[2025-11-11 20:48:19 +0800] [87857] [ERROR] Worker (pid:92183) exited with code 120.
+[2025-11-11 20:48:19 +0800] [87857] [ERROR] Worker (pid:92186) exited with code 120
+[2025-11-11 20:48:19 +0800] [87857] [ERROR] Worker (pid:92186) exited with code 120.
+[2025-11-11 20:48:19 +0800] [87857] [INFO] Shutting down: Master
+[2025-11-11 20:48:22 +0800] [60428] [INFO] Starting gunicorn 23.0.0
+[2025-11-11 20:48:22 +0800] [60428] [INFO] Listening at: http://127.0.0.1:8000 (60428)
+[2025-11-11 20:48:22 +0800] [60428] [INFO] Using worker: sync
+[2025-11-11 20:48:22 +0800] [60472] [INFO] Booting worker with pid: 60472
+[2025-11-11 20:48:22 +0800] [60476] [INFO] Booting worker with pid: 60476
+[2025-11-11 20:48:22 +0800] [60477] [INFO] Booting worker with pid: 60477
+[2025-11-11 20:48:22 +0800] [60478] [INFO] Booting worker with pid: 60478
+[2025-11-11 20:51:08 +0800] [60728] [INFO] Starting gunicorn 23.0.0
+[2025-11-11 20:51:08 +0800] [60728] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2025-11-11 20:51:08 +0800] [60728] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 48] Address already in use
+[2025-11-11 20:51:09 +0800] [60728] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2025-11-11 20:51:09 +0800] [60728] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 48] Address already in use
+[2025-11-11 20:51:10 +0800] [60728] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2025-11-11 20:51:10 +0800] [60728] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 48] Address already in use
+[2025-11-11 20:51:10 +0800] [60428] [INFO] Handling signal: term
+[2025-11-11 20:51:10 +0800] [60472] [INFO] Worker exiting (pid: 60472)
+[2025-11-11 20:51:10 +0800] [60478] [INFO] Worker exiting (pid: 60478)
+[2025-11-11 20:51:10 +0800] [60476] [INFO] Worker exiting (pid: 60476)
+[2025-11-11 20:51:10 +0800] [60477] [INFO] Worker exiting (pid: 60477)
+[2025-11-11 20:51:10 +0800] [60428] [INFO] Shutting down: Master
+[2025-11-11 20:51:11 +0800] [60728] [INFO] Listening at: http://127.0.0.1:8000 (60728)
+[2025-11-11 20:51:11 +0800] [60728] [INFO] Using worker: sync
+[2025-11-11 20:51:11 +0800] [60851] [INFO] Booting worker with pid: 60851
+[2025-11-11 20:51:11 +0800] [60933] [INFO] Booting worker with pid: 60933
+[2025-11-11 20:51:11 +0800] [60940] [INFO] Booting worker with pid: 60940
+[2025-11-11 20:51:11 +0800] [60935] [INFO] Starting gunicorn 23.0.0
+[2025-11-11 20:51:11 +0800] [60935] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2025-11-11 20:51:11 +0800] [60935] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 48] Address already in use
+[2025-11-11 20:51:11 +0800] [60983] [INFO] Booting worker with pid: 60983
+[2025-11-11 20:51:11 +0800] [60728] [INFO] Handling signal: term
+[2025-11-11 20:51:11 +0800] [60983] [INFO] Worker exiting (pid: 60983)
+[2025-11-11 20:51:11 +0800] [60851] [INFO] Worker exiting (pid: 60851)
+[2025-11-11 20:51:11 +0800] [60933] [INFO] Worker exiting (pid: 60933)
+[2025-11-11 20:51:11 +0800] [60940] [INFO] Worker exiting (pid: 60940)
+[2025-11-11 20:51:11 +0800] [60728] [INFO] Shutting down: Master
+[2025-11-11 20:51:12 +0800] [60935] [INFO] Listening at: http://127.0.0.1:8000 (60935)
+[2025-11-11 20:51:12 +0800] [60935] [INFO] Using worker: sync
+[2025-11-11 20:51:12 +0800] [60987] [INFO] Booting worker with pid: 60987
+[2025-11-11 20:51:12 +0800] [60988] [INFO] Booting worker with pid: 60988
+[2025-11-11 20:51:12 +0800] [60989] [INFO] Booting worker with pid: 60989
+[2025-11-11 20:51:12 +0800] [60990] [INFO] Booting worker with pid: 60990
+[2025-11-11 20:52:01 +0800] [60935] [INFO] Handling signal: term
+[2025-11-11 20:52:01 +0800] [60988] [INFO] Worker exiting (pid: 60988)
+[2025-11-11 20:52:01 +0800] [60987] [INFO] Worker exiting (pid: 60987)
+[2025-11-11 20:52:01 +0800] [60990] [INFO] Worker exiting (pid: 60990)
+[2025-11-11 20:52:01 +0800] [60989] [INFO] Worker exiting (pid: 60989)
+[2025-11-11 20:52:01 +0800] [60935] [INFO] Shutting down: Master
+[2025-11-11 21:08:15 +0800] [65329] [INFO] Starting gunicorn 23.0.0
+[2025-11-11 21:08:15 +0800] [65329] [INFO] Listening at: http://127.0.0.1:8000 (65329)
+[2025-11-11 21:08:15 +0800] [65329] [INFO] Using worker: sync
+[2025-11-11 21:08:15 +0800] [65368] [INFO] Booting worker with pid: 65368
+[2025-11-11 21:08:15 +0800] [65381] [INFO] Booting worker with pid: 65381
+[2025-11-11 21:08:15 +0800] [65383] [INFO] Booting worker with pid: 65383
+[2025-11-11 21:08:15 +0800] [65384] [INFO] Booting worker with pid: 65384
+[2025-11-11 21:20:01 +0800] [65329] [INFO] Handling signal: term
+[2025-11-11 21:20:01 +0800] [65384] [INFO] Worker exiting (pid: 65384)
+[2025-11-11 21:20:01 +0800] [65381] [INFO] Worker exiting (pid: 65381)
+[2025-11-11 21:20:01 +0800] [65368] [INFO] Worker exiting (pid: 65368)
+[2025-11-11 21:20:01 +0800] [65383] [INFO] Worker exiting (pid: 65383)
+[2025-11-11 21:20:01 +0800] [65329] [INFO] Shutting down: Master

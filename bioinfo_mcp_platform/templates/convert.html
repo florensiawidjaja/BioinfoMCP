@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}Convert Tool{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8 col-lg-6">
+    <h2 class="mb-4">PDF → MCP Converter</h2>
+
+    <!-- 上传表单 -->
+    <form id="convertForm" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="toolName" class="form-label">Tool / Server name</label>
+        <input type="text" class="form-control" id="toolName" name="name" placeholder="e.g. MyTool-MCP" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="fileInput" class="form-label">Select PDF</label>
+        <input class="form-control" type="file" id="fileInput" name="file" accept=".pdf" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Convert & Download</button>
+    </form>
+
+    <!-- 进度 / 结果 -->
+    <div id="status" class="mt-3"></div>
+  </div>
+</div>
+
+<script>
+  const form   = document.getElementById('convertForm');
+  const status = document.getElementById('status');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = 'Uploading…';
+
+    const payload = new FormData(form);
+    try {
+      const res = await fetch('/upload', { method: 'POST', body: payload });
+      if (!res.ok) throw new Error('Conversion failed');
+
+      // 触发下载
+      const blob = await res.blob();
+      const url  = URL.createObjectURL(blob);
+      const a    = document.createElement('a');
+      a.href     = url;
+      a.download = 'results.zip';
+      a.click();
+      URL.revokeObjectURL(url);
+
+      status.innerHTML = '<span class="text-success">✅ Done! Check your downloads.</span>';
+    } catch (err) {
+      status.innerHTML = '<span class="text-danger">❌ ' + err.message + '</span>';
+    }
+  });
+</script>
+{% endblock %}

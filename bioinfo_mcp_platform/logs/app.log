@@ -1,0 +1,506 @@
+2025-10-22 22:43:31,643 INFO [app] Logger initialized
+2025-10-22 22:43:31,644 INFO [app] Logger initialized
+2025-10-22 22:43:31,658 INFO [app] Logger initialized
+2025-10-22 22:43:31,704 INFO [app] Logger initialized
+2025-10-22 22:47:02,386 INFO [app] Logger initialized
+2025-10-22 22:47:02,468 INFO [app] Logger initialized
+2025-10-22 22:47:02,551 INFO [app] Logger initialized
+2025-10-22 22:47:02,575 INFO [app] Logger initialized
+2025-10-22 23:43:37,820 INFO [app] Logger initialized
+2025-10-22 23:43:37,865 INFO [app] Logger initialized
+2025-10-22 23:43:37,893 INFO [app] Logger initialized
+2025-10-22 23:43:37,943 INFO [app] Logger initialized
+2025-10-30 15:10:08,128 INFO [app] Logger initialized
+2025-10-30 15:10:08,128 INFO [app] Logger initialized
+2025-10-30 15:10:08,128 INFO [app] Logger initialized
+2025-10-30 15:10:08,128 INFO [app] Logger initialized
+2025-10-30 15:46:45,325 INFO [app] Logger initialized
+2025-10-30 15:46:45,326 INFO [app] Logger initialized
+2025-10-30 15:46:45,350 INFO [app] Logger initialized
+2025-10-30 15:46:45,350 INFO [app] Logger initialized
+2025-10-30 15:47:08,647 INFO [app] Logger initialized
+2025-10-30 15:47:08,718 INFO [app] Logger initialized
+2025-10-30 15:50:52,965 INFO [app] Logger initialized
+2025-10-30 15:50:52,965 INFO [app] Logger initialized
+2025-10-30 15:50:53,008 INFO [app] Logger initialized
+2025-10-30 15:52:30,751 INFO [app] Logger initialized
+2025-10-30 15:52:30,756 INFO [app] Logger initialized
+2025-10-30 15:52:30,793 INFO [app] Logger initialized
+2025-10-30 15:52:30,842 INFO [app] Logger initialized
+2025-10-30 16:00:32,478 INFO [app] Logger initialized
+2025-10-30 16:00:32,504 INFO [app] Logger initialized
+2025-10-30 16:00:32,580 INFO [app] Logger initialized
+2025-10-30 16:00:32,634 INFO [app] Logger initialized
+2025-10-30 16:00:44,944 ERROR [app] Exception on /market [GET]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 58, in market
+    return render_template('market.html', cards=cards)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: market.html
+2025-10-30 16:00:50,790 ERROR [app] Exception on /market [GET]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 58, in market
+    return render_template('market.html', cards=cards)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: market.html
+2025-10-30 16:01:16,197 ERROR [app] Exception on /market [GET]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 58, in market
+    return render_template('market.html', cards=cards)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: market.html
+2025-10-30 16:04:53,448 INFO [app] Logger initialized
+2025-10-30 16:04:53,463 INFO [app] Logger initialized
+2025-10-30 16:04:53,535 INFO [app] Logger initialized
+2025-10-30 16:04:53,578 INFO [app] Logger initialized
+2025-10-30 16:05:04,553 ERROR [app] Exception on /market [GET]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 58, in market
+    return render_template('market.html', cards=cards)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: market.html
+2025-10-30 16:06:46,640 INFO [app] Logger initialized
+2025-10-30 16:06:46,647 INFO [app] Logger initialized
+2025-10-30 16:06:46,735 INFO [app] Logger initialized
+2025-10-30 16:06:46,830 INFO [app] Logger initialized
+2025-10-30 16:06:56,190 ERROR [app] Exception on /market [GET]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 58, in market
+    return render_template('market.html', cards=cards)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/templates/market.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/templates/base.html", line 13, in top-level template code
+    <a class="navbar-brand fw-bold text-primary" href="{{ url_for('index') }}">Bioinfo MCP Hub</a>
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'convert' instead?
+2025-10-30 16:12:16,550 INFO [app] Logger initialized
+2025-10-30 16:12:16,564 INFO [app] Logger initialized
+2025-10-30 16:12:16,656 INFO [app] Logger initialized
+2025-10-30 16:12:16,747 INFO [app] Logger initialized
+2025-10-30 16:16:47,201 INFO [app] Logger initialized
+2025-10-30 16:16:47,211 INFO [app] Logger initialized
+2025-10-30 16:16:47,207 INFO [app] Logger initialized
+2025-10-30 16:16:47,237 INFO [app] Logger initialized
+2025-10-30 16:20:58,516 INFO [app] Logger initialized
+2025-10-30 16:20:58,546 INFO [app] Logger initialized
+2025-10-30 16:20:58,560 INFO [app] Logger initialized
+2025-10-30 16:20:58,622 INFO [app] Logger initialized
+2025-10-30 16:21:09,802 ERROR [app] Exception on / [GET]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 47, in home
+    return redirect(url_for('market'))
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/helpers.py", line 239, in url_for
+    return current_app.url_for(
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'market'. Did you mean 'home' instead?
+2025-10-30 16:25:15,805 INFO [app] Logger initialized
+2025-10-30 16:25:15,805 INFO [app] Logger initialized
+2025-10-30 16:25:15,817 INFO [app] Logger initialized
+2025-10-30 16:25:15,895 INFO [app] Logger initialized
+2025-10-30 16:30:08,380 INFO [app] Logger initialized
+2025-10-30 16:30:08,441 INFO [app] Logger initialized
+2025-10-30 16:30:08,546 INFO [app] Logger initialized
+2025-10-30 16:30:08,591 INFO [app] Logger initialized
+2025-10-30 16:34:13,562 INFO [app] Logger initialized
+2025-10-30 16:34:13,588 INFO [app] Logger initialized
+2025-10-30 16:34:13,692 INFO [app] Logger initialized
+2025-10-30 16:34:13,743 INFO [app] Logger initialized
+2025-10-30 16:36:08,976 INFO [app] Logger initialized
+2025-10-30 16:36:08,976 INFO [app] Logger initialized
+2025-10-30 16:36:09,038 INFO [app] Logger initialized
+2025-10-30 16:36:09,058 INFO [app] Logger initialized
+2025-10-30 16:39:14,907 INFO [app] Logger initialized
+2025-10-30 16:39:14,907 INFO [app] Logger initialized
+2025-10-30 16:39:14,922 INFO [app] Logger initialized
+2025-10-30 16:39:15,002 INFO [app] Logger initialized
+2025-10-30 16:41:50,486 INFO [app] Logger initialized
+2025-10-30 16:41:50,486 INFO [app] Logger initialized
+2025-10-30 16:41:50,587 INFO [app] Logger initialized
+2025-10-30 16:41:50,671 INFO [app] Logger initialized
+2025-10-30 16:42:07,853 INFO [app] Logger initialized
+2025-10-30 16:42:07,855 INFO [app] Logger initialized
+2025-10-30 16:42:07,899 INFO [app] Logger initialized
+2025-10-30 16:42:07,932 INFO [app] Logger initialized
+2025-10-30 16:50:04,383 INFO [app] Logger initialized
+2025-10-30 16:50:04,456 INFO [app] Logger initialized
+2025-10-30 16:50:04,471 INFO [app] Logger initialized
+2025-10-30 16:50:04,518 INFO [app] Logger initialized
+2025-10-30 16:53:31,108 INFO [app] Logger initialized
+2025-10-30 16:53:31,108 INFO [app] Logger initialized
+2025-10-30 16:53:31,129 INFO [app] Logger initialized
+2025-10-30 16:53:31,150 INFO [app] Logger initialized
+2025-10-30 16:53:52,938 ERROR [app] Exception on / [GET]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 47, in home
+    return redirect(url_for('market'))
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/helpers.py", line 239, in url_for
+    return current_app.url_for(
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'market'. Did you mean 'home' instead?
+2025-10-30 16:54:00,234 INFO [app] Logger initialized
+2025-10-30 16:54:00,313 INFO [app] Logger initialized
+2025-10-30 16:54:00,340 INFO [app] Logger initialized
+2025-10-30 16:54:00,393 INFO [app] Logger initialized
+2025-10-30 16:57:18,919 INFO [app] Logger initialized
+2025-10-30 16:57:18,949 INFO [app] Logger initialized
+2025-10-30 16:57:19,024 INFO [app] Logger initialized
+2025-10-30 16:57:19,038 INFO [app] Logger initialized
+2025-11-08 16:57:21,247 INFO [app] Logger initialized
+2025-11-08 16:57:21,248 INFO [app] Logger initialized
+2025-11-08 16:57:21,248 INFO [app] Logger initialized
+2025-11-08 16:57:21,254 INFO [app] Logger initialized
+2025-11-08 16:57:24,065 ERROR [app] Exception on / [GET]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 47, in home
+    return redirect(url_for('market'))
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/helpers.py", line 239, in url_for
+    return current_app.url_for(
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'market'. Did you mean 'home' instead?
+2025-11-08 16:57:25,776 ERROR [app] Exception on / [GET]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 47, in home
+    return redirect(url_for('market'))
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/helpers.py", line 239, in url_for
+    return current_app.url_for(
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'market'. Did you mean 'home' instead?
+2025-11-08 17:03:18,555 INFO [app] Logger initialized
+2025-11-08 17:03:18,550 INFO [app] Logger initialized
+2025-11-08 17:03:18,555 INFO [app] Logger initialized
+2025-11-08 17:03:18,591 INFO [app] Logger initialized
+2025-11-08 17:03:23,162 ERROR [app] Exception on / [GET]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 47, in home
+    return redirect(url_for('market'))
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/helpers.py", line 239, in url_for
+    return current_app.url_for(
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'market'. Did you mean 'home' instead?
+2025-11-08 17:11:20,604 INFO [app] Logger initialized
+2025-11-08 17:11:20,658 INFO [app] Logger initialized
+2025-11-08 17:11:20,681 INFO [app] Logger initialized
+2025-11-08 17:11:20,683 INFO [app] Logger initialized
+2025-11-08 17:24:45,506 INFO [app] Logger initialized
+2025-11-08 17:24:45,506 INFO [app] Logger initialized
+2025-11-08 17:24:45,516 INFO [app] Logger initialized
+2025-11-08 17:24:45,566 INFO [app] Logger initialized
+2025-11-08 17:25:45,487 INFO [app] Logger initialized
+2025-11-08 17:25:45,487 INFO [app] Logger initialized
+2025-11-08 17:25:45,487 INFO [app] Logger initialized
+2025-11-08 17:25:45,573 INFO [app] Logger initialized
+2025-11-10 14:06:46,138 INFO [app] Logger initialized
+2025-11-10 14:06:46,138 INFO [app] Logger initialized
+2025-11-10 14:06:46,138 INFO [app] Logger initialized
+2025-11-10 14:06:46,165 INFO [app] Logger initialized
+2025-11-10 14:06:52,106 ERROR [app] Exception on / [GET]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 47, in home
+    return redirect(url_for('market'))
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/helpers.py", line 239, in url_for
+    return current_app.url_for(
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'market'. Did you mean 'home' instead?
+2025-11-10 14:07:43,592 INFO [app] Logger initialized
+2025-11-10 14:12:17,876 INFO [app] Logger initialized
+2025-11-10 14:14:19,480 INFO [app] Logger initialized
+2025-11-10 17:14:46,082 INFO [app] Logger initialized
+2025-11-10 17:17:39,702 INFO [app] Logger initialized
+2025-11-10 17:17:39,702 INFO [app] Logger initialized
+2025-11-10 17:17:39,713 INFO [app] Logger initialized
+2025-11-10 17:17:39,741 INFO [app] Logger initialized
+2025-11-10 17:17:39,804 INFO [app] Logger initialized
+2025-11-10 17:17:39,805 INFO [app] Logger initialized
+2025-11-10 17:17:39,808 INFO [app] Logger initialized
+2025-11-10 17:17:39,809 INFO [app] Logger initialized
+2025-11-11 20:40:27,246 INFO [app] ====== /upload hit ======
+2025-11-11 20:40:31,576 INFO [app] File: FastQC.pdf, Tool: FastQC
+2025-11-11 20:40:31,634 ERROR [app] Conversion failed (returncode=1). stdout= stderr=Traceback (most recent call last):
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/scripts/do_sth.py", line 3, in <module>
+    from main import workflow
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/scripts/main.py", line 224
+    python -m main --name fastqc --manual "\-\-help" --run_help_command True --output_location ./output
+              ^^^^
+SyntaxError: invalid syntax
+
+2025-11-11 20:40:31,635 ERROR [app] Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/app.py", line 85, in upload
+    proc = subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=300)
+  File "/opt/anaconda3/envs/bioinfomcp/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/opt/anaconda3/envs/bioinfomcp/bin/python3.10', 'scripts/do_sth.py', 'uploads/FastQC.pdf', 'results/output_br5zbxx9', 'FastQC']' returned non-zero exit status 1.
+2025-11-11 20:48:23,001 INFO [app] Logger initialized
+2025-11-11 20:48:23,001 INFO [app] Logger initialized
+2025-11-11 20:48:23,001 INFO [app] Logger initialized
+2025-11-11 20:48:23,036 INFO [app] Logger initialized
+2025-11-11 20:48:45,466 INFO [app] ====== /upload hit ======
+2025-11-11 20:48:45,474 INFO [app] File: FastQC.pdf, Tool: FastQC
+2025-11-11 20:48:45,477 INFO [app] Running cmd: /opt/anaconda3/envs/bioinfomcp/bin/python3.10 scripts/do_sth.py uploads/FastQC.pdf results/output_quu5hwco FastQC
+2025-11-11 20:48:45,527 ERROR [app] Conversion failed ! code=1
+2025-11-11 20:48:45,528 ERROR [app] stdout >>>
+
+2025-11-11 20:48:45,528 ERROR [app] stderr >>>
+Traceback (most recent call last):
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/scripts/do_sth.py", line 3, in <module>
+    from main import workflow
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/scripts/main.py", line 224
+    python -m main --name fastqc --manual "\-\-help" --run_help_command True --output_location ./output
+              ^^^^
+SyntaxError: invalid syntax
+
+2025-11-11 20:51:11,485 INFO [app] Logger initialized
+2025-11-11 20:51:11,541 INFO [app] Logger initialized
+2025-11-11 20:51:11,621 INFO [app] Logger initialized
+2025-11-11 20:51:11,641 INFO [app] Logger initialized
+2025-11-11 20:51:12,629 INFO [app] Logger initialized
+2025-11-11 20:51:12,723 INFO [app] Logger initialized
+2025-11-11 20:51:12,814 INFO [app] Logger initialized
+2025-11-11 20:51:12,913 INFO [app] Logger initialized
+2025-11-11 20:51:30,448 INFO [app] ====== /upload hit ======
+2025-11-11 20:51:34,434 INFO [app] File: FastQC.pdf, Tool: FastQC
+2025-11-11 20:51:34,437 INFO [app] Running cmd: /opt/anaconda3/envs/bioinfomcp/bin/python3.10 scripts/do_sth.py uploads/FastQC.pdf results/output_g3kzgukh FastQC
+2025-11-11 20:51:34,487 ERROR [app] Conversion failed ! code=1
+2025-11-11 20:51:34,488 ERROR [app] stdout >>>
+
+2025-11-11 20:51:34,489 ERROR [app] stderr >>>
+Traceback (most recent call last):
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/scripts/do_sth.py", line 3, in <module>
+    from main import workflow
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/scripts/main.py", line 3, in <module>
+    from bioinfomcp_converter import BioinfoMCP
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/scripts/bioinfomcp_converter.py", line 2, in <module>
+    from google import genai
+ModuleNotFoundError: No module named 'google'
+
+2025-11-11 21:08:15,220 INFO [app] Logger initialized
+2025-11-11 21:08:15,220 INFO [app] Logger initialized
+2025-11-11 21:08:15,249 INFO [app] Logger initialized
+2025-11-11 21:08:15,269 INFO [app] Logger initialized
+2025-11-11 21:08:29,707 INFO [app] ====== /upload hit ======
+2025-11-11 21:08:33,500 INFO [app] File: FastQC.pdf, Tool: FastQC
+2025-11-11 21:08:33,502 INFO [app] Running cmd: /opt/anaconda3/envs/bioinfomcp/bin/python3.10 scripts/do_sth.py uploads/FastQC.pdf results/output_7i97t7lg FastQC
+2025-11-11 21:08:34,259 ERROR [app] Conversion failed ! code=1
+2025-11-11 21:08:34,260 ERROR [app] stdout >>>
+
+2025-11-11 21:08:34,260 ERROR [app] stderr >>>
+/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/google/api_core/_python_version_support.py:266: FutureWarning: You are using a Python version (3.10.13) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+Traceback (most recent call last):
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/scripts/do_sth.py", line 3, in <module>
+    from main import workflow
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/scripts/main.py", line 3, in <module>
+    from bioinfomcp_converter import BioinfoMCP
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/scripts/bioinfomcp_converter.py", line 2, in <module>
+    from google.generativeai import genai
+ImportError: cannot import name 'genai' from 'google.generativeai' (/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/google/generativeai/__init__.py)
+
+2025-11-11 21:19:38,692 INFO [app] ====== /upload hit ======
+2025-11-11 21:19:40,139 INFO [app] File: FastQC.pdf, Tool: FastQC
+2025-11-11 21:19:40,142 INFO [app] Running cmd: /opt/anaconda3/envs/bioinfomcp/bin/python3.10 scripts/do_sth.py uploads/FastQC.pdf results/output_3vrvnzlz FastQC
+2025-11-11 21:19:40,839 ERROR [app] Conversion failed ! code=1
+2025-11-11 21:19:40,840 ERROR [app] stdout >>>
+
+2025-11-11 21:19:40,840 ERROR [app] stderr >>>
+/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/google/api_core/_python_version_support.py:266: FutureWarning: You are using a Python version (3.10.13) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+Traceback (most recent call last):
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/scripts/do_sth.py", line 3, in <module>
+    from main import workflow
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/scripts/main.py", line 3, in <module>
+    from bioinfomcp_converter import BioinfoMCP
+  File "/Users/macbook/Sites/bioinfo_mcp_platform/scripts/bioinfomcp_converter.py", line 2, in <module>
+    from google.generativeai import genai
+ImportError: cannot import name 'genai' from 'google.generativeai' (/opt/anaconda3/envs/bioinfomcp/lib/python3.10/site-packages/google/generativeai/__init__.py)
+
